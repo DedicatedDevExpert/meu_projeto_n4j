@@ -18,7 +18,7 @@
 ---
 
 ## ✅ Acertos e Soluções Aplicadas
-- 🎨 **Cores dos nós**: diferenciamos entidades por tipo (Instituição, Diretor, Médico, Enfermeiro, Paciente), tornando o grafo mais intuitivo
+- 🎨 **Cores dos nós**: diferenciamos entidades por tipo (Instituição, Diretor, Médico, Enfermeiro, Paciente), e posteriormente evoluímos para cores específicas por entidade individual, tornando o grafo mais intuitivo
 - 🌈 **Cores das arestas por relação completa**: cada relação ganhou uma cor própria (`tem diretor`, `coordena`, `atende` etc.)
 - 🔠 **Cores por verbo isolado**: além das relações completas, passamos a permitir configuração por verbo (`tem`, `coordena`, `cuida`), dando flexibilidade ao desenvolvedor
 - ✨ **Fonte configurável nas arestas**: ajustamos tamanho, cor, tipo de letra, sombra e fundo, eliminando o problema da sombra interna
@@ -28,7 +28,7 @@
 ---
 
 ## 🏆 Conquistas Alcançadas
-- 🚀 **Evolução do projeto**: evoluímos de um grafo simples para uma ferramenta interativa e configurável, com visual moderno
+- 🚀 **Evolução do projeto**: evoluímos de um grafo simples para uma ferramenta interativa e configurável, com visual moderno e sistema de cores refinado (de cores por tipo para cores específicas por entidade)
 - 🛠️ **Flexibilidade de configuração**: o desenvolvedor agora pode personalizar cores, fontes e espaçamento sem alterar a estrutura principal do código
 - 📚 **Superação de desafios**: superamos erros técnicos e limitações da biblioteca, transformando cada obstáculo em aprendizado
 - 🌍 **Solução robusta**: o projeto se tornou uma solução clara e flexível, que pode ser usada tanto para ensino quanto para gestão hospitalar

@@ -38,7 +38,7 @@ net.set_options("""
   "physics": {
     "enabled": true,
     "barnesHut": {
-      "springLength": 250,
+      "springLength": 350,
       "springConstant": 0.05
     }
   },

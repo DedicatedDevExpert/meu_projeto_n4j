@@ -64,7 +64,7 @@ Este sistema combina inteligência artificial com visualização de dados para:
 
 ### 3️⃣ Formatação Alternativa (`outro_formato.py`)
 - 🔄 Mesma estrutura hospitalar com física desabilitada
-- 🏷️ Classificação simplificada: Instituição vs Pessoa
+- 🎨 Cores específicas por entidade individual (Hospital Central: laranja, Diretor: vermelho, etc.)
 - 📌 Layout estático para melhor legibilidade
 
 ### 4️⃣ Exploração de Modelos (`modelos_gemini.py`)

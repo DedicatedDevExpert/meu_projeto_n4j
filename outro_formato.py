@@ -46,8 +46,14 @@ net.set_options(
 # Fundo preto
 net.bgcolor = "#000000"
 
-# 🔹 Configuração de cores dos nós
-cores_nos = {"Instituição": "orange", "Pessoa": "deepskyblue"}
+# 🔹 Configuração de cores por entidade
+cores_entidades = {
+    "Hospital Central": "orange",
+    "Diretor": "red",
+    "Médico": "green",
+    "Enfermeiro": "purple",
+    "Paciente": "yellow"
+}
 
 # 🔹 Configuração de cores por relação completa
 cores_relacoes = {
@@ -61,19 +67,22 @@ cores_relacoes = {
 }
 
 # 🔹 Configuração de cores por verbo isolado
-cores_verbos = {"tem": "cyan", "coordena": "pink", "cuida": "orange", "atende": "lime"}
+cores_verbos = {
+    "tem": "cyan",
+    "coordena": "pink",
+    "cuida": "orange",
+    "atende": "lime"
+}
 
-# Adiciona nós com cores
+# Adiciona nós com cores específicas
 for entidade in dados["entidades"]:
     nome = entidade.get("nome", "")
-    tipo = entidade.get("tipo", "")
-    cor = cores_nos.get(tipo, "gray")
+    cor = cores_entidades.get(nome, "gray")
     net.add_node(nome, label=nome, color=cor)
 
 # Adiciona arestas com fonte configurável e cores
 for origem, relacao, destino in dados["relacoes"]:
     verbo = relacao.split()[0]  # pega o primeiro termo
-    # prioridade: verbo > relação completa
     cor = cores_verbos.get(verbo, cores_relacoes.get(relacao, "gray"))
     net.add_edge(
         origem,
@@ -83,9 +92,9 @@ for origem, relacao, destino in dados["relacoes"]:
             "size": 18,
             "color": "white",
             "face": "arial",
-            "strokeWidth": 0,  # remove sombra interna
-            "strokeColor": "black",  # cor da sombra se strokeWidth > 0
-            "background": None,  # pode ser "black" para fundo atrás do texto
+            "strokeWidth": 0,       # remove sombra interna
+            "strokeColor": "black", # cor da sombra se strokeWidth > 0
+            "background": None      # pode ser "black" para fundo atrás do texto
         },
         width=3,
         color=cor,
